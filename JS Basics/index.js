@@ -59,3 +59,19 @@ function square(number) {
 }
 let number = square(9);
 console.log(number)
+
+let house = {
+    bathrooms: 5,
+    bedrooms: 4,
+    kitchens: 1
+};
+
+console.log("The number of bathrooms is " + house.bathrooms);
+let room = 'kitchens'
+console.log("The number of " + room + " is " + house[room]);
+room = 'bathrooms'
+console.log("The number of " + room + " is " + house[room]);
+
+// set of rooms that I need to check
+room1 = 'bedrooms'
+room2 = 'kitchens'
