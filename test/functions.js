@@ -17,7 +17,7 @@ cookieButton.addEventListener('click', function(e)
         counterDisplay.textContent = clickCount + autoClicker;
     });
 
-//upgrgade button
+//upgrade button
 upgradeButton.addEventListener('click', function(e)
     {
         multiplyer *= upgradeMultiplier;
@@ -35,3 +35,5 @@ autoClickerButton.addEventListener('click', function(e)
         autoClickerButton.style.visibility = 'hidden';
     }
 );
+
+export  {clickCount}
