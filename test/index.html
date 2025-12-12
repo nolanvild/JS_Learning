@@ -6,13 +6,37 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Money Make-uh</h1>
-    <h2>Click Counter: <span id="counterDisplay">0</span></h2>
-    <p>x<span id ="multiplyerDisplay">1</span></p>
-    <button id = "clicker" type = button>Cookie clicker</button>
-    <button id = "upgradeButton" type = button>Upgrade</button>
+    <div id = "title">
+        <h1>Money Make-uh</h1>
+    </div>
+    
+    <div id = "scoreDisplay">
+        <h2>Click Counter: <span id="counterDisplay">0</span></h2>
+        <p>x<span id ="multiplyerDisplay">1</span></p>
+        <button id = "clicker" type = button>Cookie clicker</button>
+    </div>
+    
+    <div id = "upgradeDisplay">
+        <h3>Upgrades</h3>
+        <ul id = "upgrades"></ul>
+        <button id = "upgradeButton" type = button>Upgrade</button>
+    </div>
 
-    <script src = 'functions.js'></script>
+    <div id = "loginDisplay">
+        <legend>Leaderboard</legend>
+        <div id = "lbScores"></div>
+        <button id = "loginButton" type = button>Login</button>
+        
+        
+    </div>
+
+    <script src = 'functions.js' type = "module"></script>
+    <script src = 'loginButton.js' type = "module"></script>
+    <script>
+        localStorage
+        console.log(localStorage)
+    </script>
+    
 
     <!-- <script src = "index.js">
     </script> -->

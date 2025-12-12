@@ -15,9 +15,11 @@ cookieButton.addEventListener('click', function(e)
         counterDisplay.textContent = clickCount;
     });
 
-//upgrgade button
+//upgrade button
 upgradeButton.addEventListener('click', function(e)
     {
         multiplyer += upgradeMultiplier;
         multiplyerDisplay.textContent = + multiplyer;
     });
+
+export  {clickCount}
