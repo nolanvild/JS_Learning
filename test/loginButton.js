@@ -1,6 +1,12 @@
-// Need to double check how to import this properly from another file. 
-// Is there a better way to store global variables?
 import {clickCount} from "./functions.js"
+
+const loginButton = document.getElementById("loginButton");
+const lbScores = document.getElementById("lbScores")
+let signedIn = false;
+let currentUsername = '';
+let maxUser = "";
+let maxScore = 0
+loginButton.style.visibility = 'visible';
 
 class User {
     constructor(name, highScore){
@@ -8,11 +14,6 @@ class User {
         this.highScore = highScore
     }
 }
-
-const loginButton = document.getElementById("loginButton");
-loginButton.style.visibility = 'visible';
-let signedIn = false;
-let currentUser = '';
 
 // Login button logic
 loginButton.addEventListener('click', function(e){
@@ -27,25 +28,33 @@ loginButton.addEventListener('click', function(e){
                     }
             loginButton.style.visibility = 'hidden';
             refreshScoreboard(username);
-            currentUser = username;
+            currentUsername = username;
             }
     }
 })
 
-// Scoreboard logic
-let maxScore = 0;
-const lbScores = document.getElementById("lbScores")
+// Determine highest score
+for (let i = 0; i < localStorage.length; i++) {
+    const user = localStorage.key(i); // get the username
+    const score = Number(localStorage.getItem(user)); // get the score
+    if (score > maxScore) {
+        maxScore = score;
+        maxUser = user;
+    }
+}
 
+// Automatically Refresh Scoreboard once logged in
 function refreshScoreboard(userName){
     let userScore = Number(localStorage.getItem(userName))
     console.log(userScore)
     if (userScore > maxScore){
         maxScore = userScore;
+        maxUser = userName;
         }
     lbScores.textContent = "The current high score is user: " 
-                            + userName 
+                            + maxUser 
                             + " with a score of: " 
-                            + userScore
+                            + maxScore
                             + " points.";
     }
 
@@ -55,8 +64,8 @@ function refreshLocalStorage(username) {
 
 function autoRefresh(){
     if (signedIn === true){
-    refreshScoreboard(currentUser);
-    refreshLocalStorage(currentUser);
+    refreshScoreboard(currentUsername);
+    refreshLocalStorage(currentUsername);
 }
 }
 
