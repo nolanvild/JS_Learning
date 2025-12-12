@@ -35,7 +35,7 @@ function auto() {
 autoClickerButton.addEventListener('click', function(e)
     {
         let intervalId = setInterval(auto, 1000);
-        clickCount -= autoClickerCost;
+        clickCount = clickCount - autoClickerCost;
         autoClickerButton.style.visibility = 'hidden';
         autoClickerCost *= autoClickerScaling
     }
@@ -45,7 +45,7 @@ autoClickerButton.addEventListener('click', function(e)
 let autoClickerCost = 10;
 let upgradeButtonCost = 10;
 const autoClickerScaling = 2;
-const upgradeButtonScaling = 10;
+const upgradeButtonScaling = 2;
 
 autoClickerButton.style.visibility = 'hidden';
 upgradeButton.style.visibility = "hidden";
