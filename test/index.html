@@ -1,48 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
 
-    <div id = "title">
-        <h1 style="text-align: center;">Money Make-uh</h1>
-        <img src = Monopoly_Man.jfif alt = "Monopoly Man">
-    </div>
-    
-    <div id = "scoreDisplay">
-        <h2 style="text-align: center;">$<span id="counterDisplay">0</span></h2>
-        <p style="text-align: center;">Money Multiplier: x<span id ="multiplyerDisplay">1</span></p>
-        <button id = "clicker" type = button >Make some money</button>
-    </div>
-    
-    <div id = "upgradeDisplay">
-        <h3 style="text-align: center;">Upgrades</h3>
-        <ul id = "upgrades"></ul>
-        <button id = "upgradeButton" type = button>Upgrade</button>
-      <button id = "autoClickerButton" type = button>Auto Clicker</button>
-    </div>
+        <div id="title">
+            <h1 style="text-align: center;">Money Make-uh</h1>
+            <img src=Monopoly_Man.jfif alt="Monopoly Man">
+        </div>
 
+        <div id="scoreDisplay">
+            <h2 style="text-align: center;">$<span
+                    id="counterDisplay">0</span></h2>
+            <p style="text-align: center;">Money Multiplier: x<span
+                    id="multiplyerDisplay">1</span></p>
+            <button id="clicker" type=button>Make some money</button>
+        </div>
 
-    <div id = "loginDisplay">
-        <legend  style="text-align: center;">Leaderboard</legend>
-        <div id = "lbScores"></div>
-        <button id = "loginButton" type = button>Login</button>
-        
-        
-    </div>
+        <div id="upgradeDisplay">
+            <h3 style="text-align: center;">Upgrades</h3>
+            <ul id="upgrades"></ul>
+            <button id="upgradeButton" type=button>Upgrade: -$<span
+                    id="upgradeCostDisplay">100</span></button>
+            <button id="autoClickerButton" type=button>Auto Clicker: -$<span
+                    id="autoCostDisplay">10000</span></button>
+        </div>
 
-    <script src = 'functions.js' type = "module"></script>
-    <script src = 'loginButton.js' type = "module"></script>
-    <script>
+        <div id="loginDisplay">
+            <legend style="text-align: center;">Leaderboard</legend>
+            <div id="lbScores"></div>
+            <button id="loginButton" type=button>Login</button>
+
+        </div>
+
+        <script src='functions.js' type="module"></script>
+        <script src='loginButton.js' type="module"></script>
+        <script>
         localStorage
         console.log(localStorage)
     </script>
-    
 
-    <!-- <script src = "index.js">
+        <!-- <script src = "index.js">
     </script> -->
-</body>
+    </body>
 </html>
