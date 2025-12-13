@@ -45,7 +45,6 @@ autoClickerButton.addEventListener("click", function (e) {
   if (clickCount - autoClickerCost >= 0) {
     let intervalId = setInterval(auto, 100);
     clickCount = clickCount - autoClickerCost;
-    autoClickerButton.style.visibility = "hidden";
     autoClickerCost *= autoClickerScaling;
     counterDisplay.textContent = clickCount;
   } else {

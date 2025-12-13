@@ -1,0 +1,89 @@
+:root {
+  --clicker-size: 100px;
+  --upgrade-size: 75px;
+  --login-size: 50px;
+  --upgrade-buffer: 10px;
+}
+
+.logoimage {
+  display: block;
+  margin: auto;
+}
+
+button.clickerButton {
+  display: block;
+  margin: auto;
+  height: var(--clicker-size);
+  width: var(--clicker-size) + 50;
+  border: 0;
+  padding: 0;
+}
+
+button.clickerButton img {
+  display: inline;
+  height: var(--clicker-size);
+  width: var(--clicker-size) + 50;
+  object-fit: cover;
+}
+
+p.clickerButton {
+  text-align: center;
+}
+
+button.upgradeButton {
+  display: inline;
+  height: var(--upgrade-size);
+  width: var(--upgrade-size);
+  margin: var(--upgrade-buffer);
+  border: 0;
+  padding: 0;
+}
+
+button.upgradeButton img {
+  display: inline;
+  height: var(--upgrade-size);
+  width: var(--upgrade-size);
+}
+
+button.autoClickerButton {
+  display: inline;
+  height: var(--upgrade-size);
+  width: var(--upgrade-size);
+  border: 0;
+  padding: 0;
+  margin: var(--upgrade-buffer);
+}
+
+button.autoClickerButton img {
+  height: var(--upgrade-size);
+  width: var(--upgrade-size);
+}
+
+button.loginButton {
+  display: block;
+  margin: auto;
+  height: var(--clicker-size) / 4;
+  width: var(--clicker-size);
+  border: 0;
+  padding: 0;
+}
+
+button.loginButton img {
+  display: inline;
+  height: var(--clicker-size) / 4;
+  width: var(--clicker-size);
+  object-fit: cover;
+}
+
+div.upgradeButtons {
+  text-align: center;
+}
+
+div.lbScores {
+  text-align: center;
+}
+
+div.upgradeDisplay {
+  border: 0;
+  padding: 0;
+}
