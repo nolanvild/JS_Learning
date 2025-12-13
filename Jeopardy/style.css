@@ -33,6 +33,7 @@ div.screenDisplay {
   background-color: black;
   border-radius: 10px;
   padding-top: 5px;
+  margin-bottom: 5px;
 }
 
 p.screenDisplay {
@@ -40,4 +41,47 @@ p.screenDisplay {
   text-align: center;
   margin: 2px;
   font-size: 75px;
+}
+
+/* The question categories */
+div.categories {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  background-color: black;
+  padding: 10px;
+  border-radius: 5px;
+  column-gap: 10px;
+}
+
+.categories div {
+  background-color: var(--jeopardy-blue);
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  border-color: black;
+  border-radius: 5px;
+  color: white;
+}
+
+/* The price tags for each category */
+div.prices {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  background-color: black;
+  grid-auto-rows: 100px;
+}
+
+.prices div {
+  background-color: #060ce9;
+  color: var(--jeopardy-gold);
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  border: 3px solid;
+  border-color: black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
