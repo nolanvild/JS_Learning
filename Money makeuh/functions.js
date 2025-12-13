@@ -55,10 +55,10 @@ autoClickerButton.addEventListener("click", function (e) {
 //not enough funds alert
 
 // upgrade visibility
-let autoClickerCost = 10;
-let upgradeButtonCost = 10;
+let autoClickerCost = 10000;
+let upgradeButtonCost = 100;
 const autoClickerScaling = 2;
-const upgradeButtonScaling = 2;
+const upgradeButtonScaling = 1.5;
 
 const upgradeCheck = setInterval(checkForUpgrades, 100);
 
