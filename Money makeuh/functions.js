@@ -1,6 +1,3 @@
-// balance cost of upgrades scaling from 100 clicks for first multiplyer and scale 1.5
-// times the cost for each upgrade after, auto clicker worth 10000, make it click 10 times per second
-
 //add alert when you arent able to
 
 //variables
@@ -58,7 +55,7 @@ autoClickerButton.addEventListener("click", function (e) {
 let autoClickerCost = 10000;
 let upgradeButtonCost = 100;
 const autoClickerScaling = 2;
-const upgradeButtonScaling = 1.5;
+const upgradeButtonScaling = 2;
 
 const upgradeCheck = setInterval(checkForUpgrades, 100);
 
