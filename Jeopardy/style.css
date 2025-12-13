@@ -1,0 +1,43 @@
+:root {
+  --jeopardy-blue: #060ce9;
+  --jeopardy-gold: #d7a63e;
+  --screen-corner-radius: 30px;
+}
+
+div.screenBackOutline {
+  display: block;
+  margin: auto;
+  height: 750px;
+  width: 1000px;
+  background-color: var(--jeopardy-gold);
+  border-radius: var(--screen-corner-radius);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+div.screenBack {
+  display: block;
+  margin: auto;
+  height: 720px;
+  width: 975px;
+  background-color: var(--jeopardy-blue);
+  border-radius: var(--screen-corner-radius);
+  padding-top: 25px;
+}
+
+div.screenDisplay {
+  display: block;
+  margin: 0 auto 0 auto;
+  height: 100px;
+  width: 900px;
+  background-color: black;
+  border-radius: 10px;
+  padding-top: 5px;
+}
+
+p.screenDisplay {
+  color: aliceblue;
+  text-align: center;
+  margin: 2px;
+  font-size: 75px;
+}
