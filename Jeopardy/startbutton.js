@@ -11,6 +11,7 @@ startButton.addEventListener("click", function (e) {
   startButton.remove();
   const playerBox = document.createElement("input");
   playerBox.placeholder = "Enter player count";
+  playerBox.className = "playerBox";
   playerDisplay.appendChild(playerBox);
 
   playerBox.addEventListener("keydown", function (e) {
@@ -26,7 +27,7 @@ startButton.addEventListener("click", function (e) {
       for (i = 0; i < numPlayers; i++) {
         const nameBox = document.createElement("input");
         nameBox.placeholder = "Player " + (i + 1) + " Name";
-        nameBox.class = "nameBox";
+        nameBox.className = "nameBox";
         playerDisplay.appendChild(nameBox);
         nameBoxes.push(nameBox);
       }
@@ -41,7 +42,7 @@ startButton.addEventListener("click", function (e) {
           themeSong.pause();
 
           for (i = 0; i < numPlayers; i++) {
-            const playerInfoDisplay = document.createElement("p");
+            const playerInfoDisplay = document.createElement("div");
             playerInfoDisplay.className = "playerInfoDisplay";
             playerInfoDisplay.id = "playerInfoDisplay" + i;
             const playerNames = JSON.parse(localStorage.getItem("playerNames"));

@@ -103,11 +103,42 @@ div.prices {
 }
 
 .playerDisplay p {
+  display: inline-block;
   color: azure;
   font-size: 30px;
 }
 
-.startbutton button {
+.nameBox,
+.playerBox,
+.startButton {
   width: 50%;
-  height: 50%;
+  height: 100%;
+  background-color: var(--jeopardy-blue);
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  border: 3px solid;
+  border-color: var(--jeopardy-gold);
+
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+div.playerInfoDisplay {
+  display: inline-block;
+  text-align: center;
+  width: 200px;
+  height: 150px;
+  background-color: var(--jeopardy-blue);
+
+  color: white;
+  font-size: 40px;
+
+  margin-top: 10px;
+  margin-inline-start: 10px;
+  border: 2px solid var(--jeopardy-gold);
 }
