@@ -4,6 +4,11 @@
   --screen-corner-radius: 30px;
 }
 
+body {
+  background-color: black;
+  color: black;
+}
+
 div.screenBackOutline {
   display: block;
   margin: auto;
@@ -88,4 +93,21 @@ div.prices {
   justify-content: center;
 
   cursor: pointer;
+}
+
+.playerDisplay {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  height: 50px;
+}
+
+.playerDisplay p {
+  color: azure;
+  font-size: 30px;
+}
+
+.startbutton button {
+  width: 50%;
+  height: 50%;
 }

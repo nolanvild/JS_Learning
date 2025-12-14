@@ -10,13 +10,22 @@
     <div class="screenBackOutline">
       <div class="screenBack">
         <div class="screenDisplay">
-          <p class="screenDisplay"><strong>Jeopardy!</strong></p>
+          <p class="screenDisplay" id="screenDisplay">
+            <strong>Jeopardy!</strong>
+          </p>
         </div>
         <div id="categoryList" class="categories"></div>
         <div id="priceBoard" class="prices">
           <script src="gridcreation.js"></script>
         </div>
       </div>
+    </div>
+    <div>
+      <audio id="themeSong" src="sounds/Jeopardy-theme-song.mp3" loop></audio>
+    </div>
+    <div id="playerDisplay" class="playerDisplay">
+      <button id="startButton" class="startButton">Start New Game</button>
+      <script src="startbutton.js"></script>
     </div>
   </body>
 </html>
