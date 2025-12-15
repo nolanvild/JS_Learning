@@ -1,39 +1,40 @@
 const categoryList = document.getElementById("categoryList");
 const board = document.getElementById("priceBoard");
 let mainDisplay = document.getElementById("screenDisplay");
+let gameData;
 
 const prices = [200, 400, 600, 800, 1000];
-const categories = [
-  "Ur Mom",
-  "League of Legends",
-  "Chess",
-  "Josh",
-  "Ur Mom (Again)",
-  "My Mom?",
-];
+let category = "";
+const categories = [1, 2, 3, 4, 5, 6];
 
-const questions = [
-  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
-  23, 24, 25, 26, 27, 28, 29, 30,
-];
-
-categories.forEach((category, i) => {
-  const div = document.createElement("div");
-  div.className = "category" + i;
-  div.textContent = category;
-  categoryList.appendChild(div);
-});
-
-prices.forEach((prices, i) => {
-  categories.forEach((category, j) => {
-    const button = document.createElement("button");
-    button.className = "cell" + i + j;
-    button.textContent = "$" + prices;
-    button.addEventListener("click", function (e) {
-      mainDisplay.textContent = "question" + i + j;
-      button.textContent = "";
-      button.disabled = "true";
+fetch("Questions_Categories_Answers.json")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Failed to load JSON");
+    }
+    return response.json();
+  })
+  .then((data) => {
+    gameData = data;
+    categories.forEach((category, i) => {
+      const div = document.createElement("div");
+      div.className = "category" + i;
+      div.textContent = gameData.categories[i];
+      categoryList.appendChild(div);
     });
-    board.appendChild(button);
+
+    prices.forEach((prices, i) => {
+      categories.forEach((category, j) => {
+        const button = document.createElement("button");
+        button.className = "cell" + i + j;
+        button.textContent = "$" + prices;
+        button.addEventListener("click", function (e) {
+          mainDisplay.textContent =
+            gameData.questions["Category" + (j + 1) + "_" + (i + 1) * 200];
+          button.textContent = "";
+          button.disabled = "true";
+        });
+        board.appendChild(button);
+      });
+    });
   });
-});
