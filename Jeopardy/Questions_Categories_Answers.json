@@ -1,0 +1,48 @@
+{
+  "categories": [
+    "Category 1",
+    "Category 2",
+    "Category 3",
+    "Category 4",
+    "Category 5",
+    "Category 6"
+  ],
+
+  "questions": {
+    "Category1_200": "q1",
+    "Category1_400": "q2",
+    "Category1_600": "q3",
+    "Category1_800": "q4",
+    "Category1_1000": "q5",
+
+    "Category2_200": "q1",
+    "Category2_400": "q2",
+    "Category2_600": "q3",
+    "Category2_800": "q4",
+    "Category2_1000": "q5",
+
+    "Category3_200": "q1",
+    "Category3_400": "q2",
+    "Category3_600": "q3",
+    "Category3_800": "q4",
+    "Category3_1000": "q5",
+
+    "Category4_200": "q1",
+    "Category4_400": "q2",
+    "Category4_600": "q3",
+    "Category4_800": "q4",
+    "Category4_1000": "q5",
+
+    "Category5_200": "q1",
+    "Category5_400": "q2",
+    "Category5_600": "q3",
+    "Category5_800": "q4",
+    "Category5_1000": "q5",
+
+    "Category6_200": "q1",
+    "Category6_400": "q2",
+    "Category6_600": "q3",
+    "Category6_800": "q4",
+    "Category6_1000": "q5"
+  }
+}
