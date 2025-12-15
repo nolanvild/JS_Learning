@@ -17,7 +17,6 @@ startButton.addEventListener("click", function (e) {
   playerBox.addEventListener("keydown", function (e) {
     if (e.key === "Enter") {
       numPlayers = playerBox.value;
-      console.log(numPlayers);
       playerBox.remove();
 
       localStorage.setItem("numPlayers", numPlayers);
@@ -33,21 +32,59 @@ startButton.addEventListener("click", function (e) {
       }
       nameBoxes[nameBoxes.length - 1].addEventListener("keydown", function (e) {
         if (e.key === "Enter") {
-          console.log("yes");
-
           // Collect all player names
           const playerNames = nameBoxes.map((box) => box.value);
           localStorage.setItem("playerNames", JSON.stringify(playerNames));
           nameBoxes.forEach((box) => box.remove());
           themeSong.pause();
 
-          for (i = 0; i < numPlayers; i++) {
+          for (let i = 0; i < numPlayers; i++) {
+            localStorage.setItem("player" + i + "Score", "0");
             const playerInfoDisplay = document.createElement("div");
             playerInfoDisplay.className = "playerInfoDisplay";
             playerInfoDisplay.id = "playerInfoDisplay" + i;
             const playerNames = JSON.parse(localStorage.getItem("playerNames"));
             playerInfoDisplay.textContent = playerNames[i];
             playerDisplay.appendChild(playerInfoDisplay);
+
+            const playerScoreDisplay = document.createElement("div");
+            playerScoreDisplay.className = "playerScoreDisplay";
+            playerScoreDisplay.id = "playerScoreDisplay" + i;
+            playerScoreDisplay.textContent = "$0";
+            playerInfoDisplay.appendChild(playerScoreDisplay);
+
+            const playerAddPoints = document.createElement("button");
+            playerAddPoints.className = "playerAddPoints";
+            playerAddPoints.id = "playerAddPoints" + i;
+            playerAddPoints.addEventListener("click", function (e) {
+              currentScore = Number(
+                localStorage.getItem("player" + i + "Score")
+              );
+              currentScore += Number("200");
+              const playerScore = document.getElementById(
+                "playerScoreDisplay" + i
+              );
+              playerScore.textContent = "$" + currentScore;
+              localStorage.setItem("player" + i + "Score", currentScore);
+            });
+
+            const playerRemovePoints = document.createElement("button");
+            playerRemovePoints.className = "playerRemovePoints";
+            playerRemovePoints.id = "playerRemovePoints" + i;
+            playerRemovePoints.addEventListener("click", function (e) {
+              currentScore = Number(
+                localStorage.getItem("player" + i + "Score")
+              );
+              currentScore -= Number("200");
+              const playerScore = document.getElementById(
+                "playerScoreDisplay" + i
+              );
+              playerScore.textContent = "$" + currentScore;
+              localStorage.setItem("player" + i + "Score", currentScore);
+            });
+
+            playerInfoDisplay.appendChild(playerRemovePoints);
+            playerInfoDisplay.appendChild(playerAddPoints);
           }
         }
       });
